@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Rush00" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X47-em-IEs">
+                                <rect key="frame" x="20" y="430" width="374" height="36"/>
+                                <color key="backgroundColor" red="0.45285022260000002" green="0.77148979900000003" blue="0.1750998795" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="LogIn"/>
+                                <connections>
+                                    <action selector="LoginButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZZu-TM-pod"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ErrorLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5gJ-qZ-EiQ">
+                                <rect key="frame" x="20" y="389" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="X47-em-IEs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="5hg-0G-ZJW"/>
+                            <constraint firstItem="5gJ-qZ-EiQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="8aM-Gp-I3L"/>
+                            <constraint firstItem="X47-em-IEs" firstAttribute="top" secondItem="5gJ-qZ-EiQ" secondAttribute="bottom" constant="20" id="KV2-cS-SP3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5gJ-qZ-EiQ" secondAttribute="trailing" constant="20" id="LWR-Xv-C7h"/>
+                            <constraint firstItem="X47-em-IEs" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="YdA-JO-pf4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="X47-em-IEs" secondAttribute="trailing" constant="20" id="brP-1P-lEO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="errorLabel" destination="5gJ-qZ-EiQ" id="RXZ-Z8-RqN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-258" y="94"/>
+        </scene>
+        <!--Authentification-->
+        <scene sceneID="2fA-iW-mUu">
+            <objects>
+                <viewController storyboardIdentifier="Authentification" title="Authentification" id="Qod-r6-g7A" customClass="WebVC" customModule="Rush00" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kjA-4b-nS3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rYV-nS-NdZ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="rYV-nS-NdZ" firstAttribute="leading" secondItem="HhY-Ra-nPL" secondAttribute="leading" id="3f4-qd-mUy"/>
+                            <constraint firstItem="HhY-Ra-nPL" firstAttribute="bottom" secondItem="rYV-nS-NdZ" secondAttribute="bottom" id="Avv-Ey-nle"/>
+                            <constraint firstItem="HhY-Ra-nPL" firstAttribute="trailing" secondItem="rYV-nS-NdZ" secondAttribute="trailing" id="eCZ-5f-UqG"/>
+                            <constraint firstItem="rYV-nS-NdZ" firstAttribute="top" secondItem="HhY-Ra-nPL" secondAttribute="top" id="hrB-h9-VOU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="HhY-Ra-nPL"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="rYV-nS-NdZ" id="Uz5-xY-B9o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5EI-PF-ByK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="972" y="-246"/>
+        </scene>
+    </scenes>
+</document>
